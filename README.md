@@ -1,13 +1,13 @@
-# Hi 👋 I'm Supakorn Sawetwongsakul (New)
+# สวัสดีครับ 👋 ผมศุภากร เศวตวงศ์สกุล (นิว)
 
 ### Automation QA Engineer | Playwright + TypeScript
 
-I build maintainable end-to-end test automation with the Page Object Model, and I care about test design as much as test code. Before moving into QA I spent a year as a frontend developer, which is where I learned how apps actually break.
+ผมเขียน end-to-end test automation ที่ดูแลต่อได้จริงด้วย Page Object Model และให้ความสำคัญกับ **การออกแบบเทส** พอๆ กับโค้ดเทส ก่อนย้ายมาสาย QA ผมเป็น frontend developer อยู่ 1 ปี ซึ่งเป็นช่วงที่ได้เห็นกับตาว่าแอปพังด้วยสาเหตุอะไรบ้าง
 
-- 🌍 Based in Samut Songkhram, Thailand
-- 🎓 B.Eng. (Continuing Program), Electronic Engineering Technology — KMUTNB, College of Industrial Technology
-- 🧪 Focused on E2E automation, API testing, CI pipelines, and test strategy
-- 🎯 Next step: SDET / QA Lead
+- 🌍 อยู่จังหวัดสมุทรสงคราม
+- 🎓 วศ.บ. (ต่อเนื่อง) เทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ — มจพ. วิทยาลัยเทคโนโลยีอุตสาหกรรม
+- 🧪 ถนัด E2E automation, API testing, CI pipeline และการวางกลยุทธ์การทดสอบ
+- 🎯 เป้าหมายถัดไป: SDET / QA Lead
 - ✉️ newnertg@gmail.com
 
 ---
@@ -34,39 +34,45 @@ I build maintainable end-to-end test automation with the Page Object Model, and 
 
 ---
 
-### 🧪 QA Portfolio
+### 🧪 ผลงานด้าน QA
 
-| Project | What it covers | Stack |
+| โปรเจกต์ | ครอบคลุมอะไร | Stack |
 | --- | --- | --- |
-| Krungthon Air — QA suite *(private — client system)* | **99 tests across 37 spec files** for a Firebase queue-booking platform in production. 53 test cases traceable by TC-ID. Covers auth, booking, authorization, concurrent-booking races, multi-tenant isolation, a11y, mobile responsive, and API-level checks against Cloud Functions. Three CI workflows — PR runs, Discord notifications, and a **daily soak against production** that catches regressions within 24 hours instead of at the next PR. | Playwright, TypeScript, Firebase, Angular |
-| [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests across 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke, and role-based auth via `storageState`. CI runs **4 parallel shards** with blob reports merged into one HTML report. Tests are tagged (`@smoke` `@regression` `@a11y` `@visual`) so any layer can be run on its own. | Playwright, TypeScript, GitHub Actions |
-| [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** across login, sorting, cart and checkout, plus visual and accessibility checks. 4 Page Objects on a shared `BasePage`. Includes `TESTING.md` — a test strategy document with scope, risk matrix and test pyramid. | Playwright, TypeScript |
+| Krungthon Air — QA suite *(private — ระบบลูกค้า)* | **99 tests ใน 37 spec files** สำหรับแพลตฟอร์มจองคิวบน Firebase ที่ใช้งานจริง มี **53 test case ที่อ้างอิงกลับด้วย TC-ID** ครอบคลุม auth, การจอง, สิทธิ์การเข้าถึง, การจองชนกันแบบ concurrent, การแยกข้อมูลระหว่าง tenant, a11y, mobile responsive และการยิง API ตรงไปที่ Cloud Functions มี CI 3 workflow — รันตอน PR, แจ้งเตือนเข้า Discord และ **daily soak ยิงกับ production ทุกวัน** เพื่อจับ regression ภายใน 24 ชั่วโมง ไม่ต้องรอ PR ถัดไป | Playwright, TypeScript, Firebase, Angular |
+| [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests ใน 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke และ auth แยกตาม role ด้วย `storageState` CI รัน **4 shard ขนาน** แล้ว merge blob report กลับเป็นรายงาน HTML ฉบับเดียว เทสติด tag (`@smoke` `@regression` `@a11y` `@visual`) เลือกรันทีละชั้นได้ | Playwright, TypeScript, GitHub Actions |
+| [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** ครอบคลุม login, การเรียงสินค้า, ตะกร้า และ checkout พร้อม visual + accessibility check มี 4 Page Object บน `BasePage` ร่วมกัน และมี `TESTING.md` — เอกสารกลยุทธ์การทดสอบที่มีขอบเขต, risk matrix และ test pyramid | Playwright, TypeScript |
 
-The Krungthon Air repository stays private because it is a client system in production — happy to walk through the suite, the TC-ID traceability and the soak workflow in an interview.
+repo ของ Krungthon Air เก็บเป็น private เพราะเป็นระบบลูกค้าที่ใช้งานจริง — ยินดีเปิดให้ดูและอธิบายโครงสร้างเทส, การอ้างอิง TC-ID และ soak workflow ตอนสัมภาษณ์ครับ
 
-**Portfolio at a glance:** 146 automated tests · 10 Page Object classes · 5 CI workflows · 1 test strategy document
+**ภาพรวมผลงาน:** 146 automated tests · 10 Page Object · 5 CI workflow · เอกสารกลยุทธ์การทดสอบ 1 ฉบับ
 
-Things I care about beyond the test count: tests that **skip instead of fail** when a dependency is missing, so a red run always means a real defect; flaky third-party behaviour **documented rather than masked** with retries; and screenshot baselines treated as OS-specific, because they are.
+**สิ่งที่ผมให้ความสำคัญมากกว่าจำนวนเทส**
 
----
-
-### 💼 Experience
-
-**Frontend Developer** — startup, 1 year
-Built and shipped features with Angular, Ionic, and Tailwind CSS on a Firebase backend.
-
-**Event Organizer / Project Coordinator** — Naikit Sticker
-Pre-event documentation, project summary reports, and survey/data management.
+- เทสที่ **skip แทนที่จะ fail** เมื่อ dependency ไม่พร้อม — เพื่อให้ "จอแดง" หมายถึงบั๊กจริงเสมอ ไม่ใช่ปัญหาสภาพแวดล้อม
+- flake จากระบบภายนอก **บันทึกไว้ให้ชัด ไม่กลบด้วย retry** เพราะ retry ที่ใส่เพื่อให้ผ่านจะบังบั๊กจริงในเทสตัวเดียวกัน
+- screenshot baseline ถือว่าผูกกับ OS เสมอ เพราะมันเป็นแบบนั้นจริงๆ
 
 ---
 
-### 📚 Currently Learning
+### 💼 ประสบการณ์
 
-Test design techniques — equivalence partitioning and boundary value analysis, decision tables and state transitions, risk-based testing, bug reporting, and exploratory testing. Applying them deliberately: each test in my suites is written against a named technique rather than by clicking through the app.
+**Frontend Developer** — startup, 1 ปี
+พัฒนาและส่งมอบฟีเจอร์ด้วย Angular, Ionic และ Tailwind CSS บน backend ที่เป็น Firebase
+
+**Event Organizer / Project Coordinator** — ร้านนายกิจสติ๊กเกอร์
+จัดทำเอกสารก่อนงาน, รายงานสรุปโปรเจกต์ และดูแลข้อมูลแบบสำรวจ
 
 ---
 
-### 🌐 Connect
+### 📚 กำลังศึกษาเพิ่มเติม
+
+เทคนิคการออกแบบเทส — equivalence partitioning และ boundary value analysis, decision table และ state transition, risk-based testing, การเขียนรายงานบั๊ก และ exploratory testing
+
+ใช้จริงไม่ใช่แค่ท่องจำ: เทสทุกตัวในชุดของผมเขียนขึ้นจากเทคนิคที่ระบุชื่อได้ ไม่ใช่การไล่คลิกไปเรื่อยๆ แล้วบันทึกไว้
+
+---
+
+### 🌐 ติดต่อ
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/NNEWNERR)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:newnertg@gmail.com)

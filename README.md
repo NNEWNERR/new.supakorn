@@ -38,11 +38,13 @@ I build maintainable end-to-end test automation with the Page Object Model, and 
 
 | Project | What it covers | Stack |
 | --- | --- | --- |
-| [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | 16 E2E tests across login, sorting, cart, checkout, plus visual and accessibility checks. 4 Page Objects. Includes `TESTING.md` — a test strategy document with a risk matrix and test pyramid. | Playwright, TypeScript |
-| [qa-automation](https://github.com/NNEWNERR/qa-automation) | 8 E2E tests with Page Object Model structure and CI running on every push. | Playwright, TypeScript, GitHub Actions |
-| Krungthon Air — QA suite | Test automation for a Firebase-based queue-booking platform for A/C cleaning services. 27 of 64 test cases automated, all P0 critical paths covered, including cross-version data-compatibility checks between the current Angular app and the legacy Ionic app. | Playwright, Firebase, Angular |
+| [Krungthon Air — QA suite](https://github.com/NNEWNERR/Krungthon-Air-QA) | **99 tests across 37 spec files** for a Firebase queue-booking platform in production. 53 test cases traceable by TC-ID. Covers auth, booking, authorization, concurrent-booking races, multi-tenant isolation, a11y, mobile responsive, and API-level checks against Cloud Functions. Three CI workflows — PR runs, Discord notifications, and a **daily soak against production** that catches regressions within 24 hours instead of at the next PR. | Playwright, TypeScript, Firebase, Angular |
+| [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests across 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke, and role-based auth via `storageState`. CI runs **4 parallel shards** with blob reports merged into one HTML report. Tests are tagged (`@smoke` `@regression` `@a11y` `@visual`) so any layer can be run on its own. | Playwright, TypeScript, GitHub Actions |
+| [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** across login, sorting, cart and checkout, plus visual and accessibility checks. 4 Page Objects on a shared `BasePage`. Includes `TESTING.md` — a test strategy document with scope, risk matrix and test pyramid. | Playwright, TypeScript |
 
-**Portfolio at a glance:** 24 automated tests · 6 Page Objects · 2 green CI badges · 1 test strategy document
+**Portfolio at a glance:** 146 automated tests · 10 Page Object classes · 5 CI workflows · 1 test strategy document
+
+Things I care about beyond the test count: tests that **skip instead of fail** when a dependency is missing, so a red run always means a real defect; flaky third-party behaviour **documented rather than masked** with retries; and screenshot baselines treated as OS-specific, because they are.
 
 ---
 
@@ -58,7 +60,7 @@ Pre-event documentation, project summary reports, and survey/data management.
 
 ### 📚 Currently Learning
 
-Test design techniques — equivalence partitioning and boundary value analysis, decision tables and state transitions, risk-based testing, bug reporting, and exploratory testing.
+Test design techniques — equivalence partitioning and boundary value analysis, decision tables and state transitions, risk-based testing, bug reporting, and exploratory testing. Applying them deliberately: each test in my suites is written against a named technique rather than by clicking through the app.
 
 ---
 

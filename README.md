@@ -39,6 +39,7 @@
 | โปรเจกต์ | ครอบคลุมอะไร | Stack |
 | --- | --- | --- |
 | Krungthon Air — QA suite *(private — ระบบลูกค้า)* | **99 tests ใน 37 spec files** สำหรับแพลตฟอร์มจองคิวบน Firebase ที่ใช้งานจริง มี **53 test case ที่อ้างอิงกลับด้วย TC-ID** ครอบคลุม auth, การจอง, สิทธิ์การเข้าถึง, การจองชนกันแบบ concurrent, การแยกข้อมูลระหว่าง tenant, a11y, mobile responsive และการยิง API ตรงไปที่ Cloud Functions มี CI 3 workflow — รันตอน PR, แจ้งเตือนเข้า Discord และ **daily soak ยิงกับ production ทุกวัน** เพื่อจับ regression ภายใน 24 ชั่วโมง ไม่ต้องรอ PR ถัดไป | Playwright, TypeScript, Firebase, Angular |
+| [multitenant-booking-qa](https://github.com/NNEWNERR/multitenant-booking-qa) | **52 tests ของ Firestore security rules** รันกับ emulator จริง (ไม่ใช่ mock) — `npm ci && npm test` จบ ไม่ต้องมี credential หรือ cloud project พิสูจน์ว่าองค์กรหนึ่งแตะข้อมูลอีกองค์กรไม่ได้ทั้งอ่าน/สร้าง/แก้/ลบ, decision table ของ role, state machine ของการจอง และความเข้ากันของ doc รุ่นเก่าที่สะกดชื่อฟิลด์คนละแบบ **เทสส่วนใหญ่เป็นเคสที่ต้องถูกปฏิเสธ** เพราะชุดที่มีแต่เคสสำเร็จพิสูจน์ไม่ได้ว่าข้อมูลไม่รั่ว CI ลง JDK แล้วบูต emulator เองทุก push | Firestore Rules, Vitest, Firebase Emulator |
 | [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests ใน 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke และ auth แยกตาม role ด้วย `storageState` CI รัน **4 shard ขนาน** แล้ว merge blob report กลับเป็นรายงาน HTML ฉบับเดียว เทสติด tag (`@smoke` `@regression` `@a11y` `@visual`) เลือกรันทีละชั้นได้ | Playwright, TypeScript, GitHub Actions |
 | [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** ครอบคลุม login, การเรียงสินค้า, ตะกร้า และ checkout พร้อม visual + accessibility check มี 4 Page Object บน `BasePage` ร่วมกัน และมี `TESTING.md` — เอกสารกลยุทธ์การทดสอบที่มีขอบเขต, risk matrix และ test pyramid | Playwright, TypeScript |
 
@@ -46,7 +47,7 @@ repo ของ Krungthon Air เก็บเป็น private เพราะเ
 
 📓 **[Case Studies — บั๊กจริงจากระบบที่ใช้งานอยู่](case-studies/)** — 6 เคสที่เล่าตั้งแต่อาการจนถึงสาเหตุราก สำหรับงานที่ repo เป็น private
 
-**ภาพรวมผลงาน:** 146 automated tests · 10 Page Object · 5 CI workflow · เอกสารกลยุทธ์การทดสอบ 1 ฉบับ
+**ภาพรวมผลงาน:** 198 automated tests · 10 Page Object · 6 CI workflow · case study 6 เคส · เอกสารกลยุทธ์การทดสอบ 1 ฉบับ
 
 **สิ่งที่ผมให้ความสำคัญมากกว่าจำนวนเทส**
 

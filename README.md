@@ -38,9 +38,11 @@ I build maintainable end-to-end test automation with the Page Object Model, and 
 
 | Project | What it covers | Stack |
 | --- | --- | --- |
-| [Krungthon Air — QA suite](https://github.com/NNEWNERR/Krungthon-Air-QA) | **99 tests across 37 spec files** for a Firebase queue-booking platform in production. 53 test cases traceable by TC-ID. Covers auth, booking, authorization, concurrent-booking races, multi-tenant isolation, a11y, mobile responsive, and API-level checks against Cloud Functions. Three CI workflows — PR runs, Discord notifications, and a **daily soak against production** that catches regressions within 24 hours instead of at the next PR. | Playwright, TypeScript, Firebase, Angular |
+| Krungthon Air — QA suite *(private — client system)* | **99 tests across 37 spec files** for a Firebase queue-booking platform in production. 53 test cases traceable by TC-ID. Covers auth, booking, authorization, concurrent-booking races, multi-tenant isolation, a11y, mobile responsive, and API-level checks against Cloud Functions. Three CI workflows — PR runs, Discord notifications, and a **daily soak against production** that catches regressions within 24 hours instead of at the next PR. | Playwright, TypeScript, Firebase, Angular |
 | [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests across 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke, and role-based auth via `storageState`. CI runs **4 parallel shards** with blob reports merged into one HTML report. Tests are tagged (`@smoke` `@regression` `@a11y` `@visual`) so any layer can be run on its own. | Playwright, TypeScript, GitHub Actions |
 | [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** across login, sorting, cart and checkout, plus visual and accessibility checks. 4 Page Objects on a shared `BasePage`. Includes `TESTING.md` — a test strategy document with scope, risk matrix and test pyramid. | Playwright, TypeScript |
+
+The Krungthon Air repository stays private because it is a client system in production — happy to walk through the suite, the TC-ID traceability and the soak workflow in an interview.
 
 **Portfolio at a glance:** 146 automated tests · 10 Page Object classes · 5 CI workflows · 1 test strategy document
 

@@ -4,7 +4,7 @@
 
 I build maintainable end-to-end test automation with the Page Object Model, and I care about test design as much as test code. Before moving into QA I spent a year as a frontend developer, which is where I learned how apps actually break.
 
-- 🌍 Based in Nakhon Pathom, Thailand
+- 🌍 Based in Samut Songkhram, Thailand
 - 🎓 B.Eng. (Continuing Program), Electronic Engineering Technology — KMUTNB, College of Industrial Technology
 - 🧪 Focused on E2E automation, API testing, CI pipelines, and test strategy
 - 🎯 Next step: SDET / QA Lead

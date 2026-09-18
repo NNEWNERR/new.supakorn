@@ -38,16 +38,16 @@
 
 | โปรเจกต์ | ครอบคลุมอะไร | Stack |
 | --- | --- | --- |
-| Krungthon Air — QA suite *(private — ระบบลูกค้า)* | **99 tests ใน 37 spec files** สำหรับแพลตฟอร์มจองคิวบน Firebase ที่ใช้งานจริง มี **53 test case ที่อ้างอิงกลับด้วย TC-ID** ครอบคลุม auth, การจอง, สิทธิ์การเข้าถึง, การจองชนกันแบบ concurrent, การแยกข้อมูลระหว่าง tenant, a11y, mobile responsive และการยิง API ตรงไปที่ Cloud Functions มี CI 3 workflow — รันตอน PR, แจ้งเตือนเข้า Discord และ **daily soak ยิงกับ production ทุกวัน** เพื่อจับ regression ภายใน 24 ชั่วโมง ไม่ต้องรอ PR ถัดไป | Playwright, TypeScript, Firebase, Angular |
-| [multitenant-booking-qa](https://github.com/NNEWNERR/multitenant-booking-qa) | **69 tests สองชั้นของระบบเดียวกัน** — 52 tests ของ Firestore security rules + 17 Playwright UI tests (desktop + Pixel 7) รันกับ emulator จริงทั้งคู่ ไม่ใช่ mock `npm ci && npm test` จบ ไม่ต้องมี credential เป็น repo เดียวที่ผมเป็นเจ้าของทั้ง stack — แอป, กฎความปลอดภัย และเทสทั้งสองชั้น จึง seed ข้อมูลรุ่นเก่า, สลับ role, และ assert สิ่งที่ **ต้องถูกปฏิเสธ** ได้ การเขียน UI test เจอบั๊กจริง 2 ตัว: เอกสารรุ่นเก่าที่ query มองไม่เห็นทั้งที่ rules ยอม และ modal ที่ถูกขังใต้ topbar 200ms ระหว่าง animation | Firestore Rules, Playwright, Vitest, Firebase Emulator |
+| Krungthon Air — QA suite *(private — ระบบลูกค้า)* | **96 E2E/API tests ใน 36 spec files + 90 Firestore rules tests** สำหรับแพลตฟอร์มจองคิวบน Firebase ที่ใช้งานจริง มี **53 test case ที่อ้างอิงกลับด้วย TC-ID** ครอบคลุม auth, การจอง, สิทธิ์การเข้าถึง, การจองชนกันแบบ concurrent, การแยกข้อมูลระหว่าง tenant, a11y, mobile responsive และการยิง API ตรงไปที่ Cloud Functions มี CI 4 workflow — matrix 17 ชุดตอน PR, ชุด rules 90 เคสบน emulator ทุก push, แจ้งเตือนเข้า Discord และ **daily soak ยิงกับ production ทุกวัน** เพื่อจับ regression ภายใน 24 ชั่วโมง ไม่ต้องรอ PR ถัดไป | Playwright, TypeScript, Firebase, Angular |
+| [multitenant-booking-qa](https://github.com/NNEWNERR/multitenant-booking-qa) | **93 tests สองชั้นของระบบเดียวกัน** — 76 tests ของ Firestore security rules + 17 Playwright UI tests (desktop + Pixel 7) รันกับ emulator จริงทั้งคู่ ไม่ใช่ mock `npm ci && npm test` จบ ไม่ต้องมี credential เป็น repo เดียวที่ผมเป็นเจ้าของทั้ง stack — แอป, กฎความปลอดภัย และเทสทั้งสองชั้น จึง seed ข้อมูลรุ่นเก่า, สลับ role, และ assert สิ่งที่ **ต้องถูกปฏิเสธ** ได้ การเขียน UI test เจอบั๊กจริง 2 ตัว: เอกสารรุ่นเก่าที่ query มองไม่เห็นทั้งที่ rules ยอม และ modal ที่ถูกขังใต้ topbar 200ms ระหว่าง animation · ชุด `public-boundary` 24 เคส พิสูจน์ว่าเส้นแบ่งสิทธิ์คือ "ยังไม่มีสังกัด" ไม่ใช่ "ยังไม่ล็อกอิน" | Firestore Rules, Playwright, Vitest, Firebase Emulator |
 | [qa-automation](https://github.com/NNEWNERR/qa-automation) | **31 tests ใน 7 Playwright projects** — API contract, UI, accessibility (axe-core), visual regression, smoke และ auth แยกตาม role ด้วย `storageState` CI รัน **4 shard ขนาน** แล้ว merge blob report กลับเป็นรายงาน HTML ฉบับเดียว เทสติด tag (`@smoke` `@regression` `@a11y` `@visual`) เลือกรันทีละชั้นได้ | Playwright, TypeScript, GitHub Actions |
 | [sauce-demo-tests](https://github.com/NNEWNERR/sauce-demo-tests) | **16 tests** ครอบคลุม login, การเรียงสินค้า, ตะกร้า และ checkout พร้อม visual + accessibility check มี 4 Page Object บน `BasePage` ร่วมกัน และมี `TESTING.md` — เอกสารกลยุทธ์การทดสอบที่มีขอบเขต, risk matrix และ test pyramid | Playwright, TypeScript |
 
 repo ของ Krungthon Air เก็บเป็น private เพราะเป็นระบบลูกค้าที่ใช้งานจริง — ยินดีเปิดให้ดูและอธิบายโครงสร้างเทส, การอ้างอิง TC-ID และ soak workflow ตอนสัมภาษณ์ครับ
 
-📓 **[Case Studies — บั๊กจริงจากระบบที่ใช้งานอยู่](case-studies/)** — 6 เคสที่เล่าตั้งแต่อาการจนถึงสาเหตุราก สำหรับงานที่ repo เป็น private
+📓 **[Case Studies — บั๊กจริงจากระบบที่ใช้งานอยู่](case-studies/)** — 8 เคสที่เล่าตั้งแต่อาการจนถึงสาเหตุราก สำหรับงานที่ repo เป็น private
 
-**ภาพรวมผลงาน:** 215 automated tests · 10 Page Object · 6 CI workflow · case study 6 เคส · เอกสารกลยุทธ์การทดสอบ 1 ฉบับ
+**ภาพรวมผลงาน:** 326 automated tests · 10 Page Object · 7 CI workflow · case study 8 เคส · เอกสารกลยุทธ์การทดสอบ 1 ฉบับ
 
 **สิ่งที่ผมให้ความสำคัญมากกว่าจำนวนเทส**
 

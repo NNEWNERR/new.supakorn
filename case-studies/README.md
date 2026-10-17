@@ -11,7 +11,7 @@
 | [CS-01](01-auth-race-condition.md) | login ล้มแบบสุ่ม 1 ใน N ครั้ง — race condition ระหว่าง session สองเส้น | แยกให้ออกว่า "เทสไม่นิ่ง" หรือ "ระบบไม่นิ่ง" ก่อนใส่ retry |
 | [CS-02](02-role-silent-failures.md) | เพิ่ม role ใหม่ 1 ตัว พังเงียบ 6 จุด | decision table (role × หน้าจอ), เคส refresh / deep link |
 | [CS-03](03-slot-leak.md) | คิวเต็มทั้งที่งานยกเลิกแล้ว — ที่นั่งค้าง 640 รายการ | state-transition testing, remediation แบบ idempotent |
-| [CS-04](04-tenant-isolation.md) | กันข้อมูลข้ามองค์กรรั่ว — ทดสอบ 3 ชั้น เจอบั๊กครบ 3 ชั้น | negative testing, rules test บน emulator (91 เคส), defense in depth |
+| [CS-04](04-tenant-isolation.md) | กันข้อมูลข้ามองค์กรรั่ว — ทดสอบ 3 ชั้น เจอบั๊กครบ 3 ชั้น | negative testing, rules test บน emulator (90 เคส), defense in depth |
 | [CS-05](05-zombie-service-worker.md) | deploy แล้วบางเครื่องเห็นหน้าเก่า — service worker ที่ตายไม่ลง | แยกตัวแปรด้วย incognito, ยืนยันที่ HTTP header |
 | [CS-06](06-mobile-only-unclickable-button.md) | ปุ่มที่ "มองเห็น" แต่ "กดไม่ได้" และเกิดเฉพาะบนมือถือ | hit-testing แทน visibility, ทดสอบแยกตามขนาดจอ |
 | [CS-07](07-legacy-escape-hatches.md) | สิทธิ์ชั่วคราวของระบบรุ่นเก่าที่ไม่ได้ปิดตามแผน — กฎกว้างเกินจำเป็น | security rules review, mutation check (กฎเดิมแดง 15 เคส), blast radius |

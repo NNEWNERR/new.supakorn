@@ -72,7 +72,7 @@ repo ของ Krungthon Air เก็บเป็น private เพราะเ
 
 เทคนิคการออกแบบเทส — equivalence partitioning และ boundary value analysis, decision table และ state transition, risk-based testing, การเขียนรายงานบั๊ก และ exploratory testing
 
-ใช้จริงไม่ใช่แค่ท่องจำ: เทสทุกตัวในชุดของผมเขียนขึ้นจากเทคนิคที่ระบุชื่อได้ ไม่ใช่การไล่คลิกไปเรื่อยๆ แล้วบันทึกไว้
+เริ่มใช้กับงานจริงแล้ว: ใน [qa-automation](https://github.com/NNEWNERR/qa-automation) ทุกเทสมีคอลัมน์ใน README บอกว่าใช้เทคนิคอะไรและทำไม เช่น equivalence partitioning, boundary, decision table และ state transition — ยังอยู่ระดับพื้นฐานและกำลังขยายไปชุดอื่น
 
 ---
 

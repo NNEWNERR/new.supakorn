@@ -14,7 +14,7 @@
 | [CS-04](04-tenant-isolation.md) | กันข้อมูลข้ามองค์กรรั่ว — ทดสอบ 3 ชั้น เจอบั๊กครบ 3 ชั้น | negative testing, rules test บน emulator (91 เคส), defense in depth |
 | [CS-05](05-zombie-service-worker.md) | deploy แล้วบางเครื่องเห็นหน้าเก่า — service worker ที่ตายไม่ลง | แยกตัวแปรด้วย incognito, ยืนยันที่ HTTP header |
 | [CS-06](06-mobile-only-unclickable-button.md) | ปุ่มที่ "มองเห็น" แต่ "กดไม่ได้" และเกิดเฉพาะบนมือถือ | hit-testing แทน visibility, ทดสอบแยกตามขนาดจอ |
-| [CS-07](07-legacy-escape-hatches.md) | สิทธิ์ของระบบรุ่นเก่าที่ลืมปิด — คนไม่ล็อกอินอ่านข้อมูลลูกค้าได้ทั้งหมด | security rules review, mutation check (กฎเดิมแดง 15 เคส), blast radius |
+| [CS-07](07-legacy-escape-hatches.md) | สิทธิ์ชั่วคราวของระบบรุ่นเก่าที่ไม่ได้ปิดตามแผน — กฎกว้างเกินจำเป็น | security rules review, mutation check (กฎเดิมแดง 15 เคส), blast radius |
 | [CS-08](08-test-blamed-the-system.md) | เทสฟ้องว่า "จองซ้อนได้" ทั้งที่ระบบถูก — บั๊กของเทส 4 ชั้น | แยกระบบออกจากเทสด้วยการยิง API ตรง, event-driven assertion, test-data isolation |
 
 ## เส้นที่ร้อยทุกเคส

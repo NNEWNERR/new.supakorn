@@ -63,7 +63,7 @@ repo ของ Krungthon Air เก็บเป็น private เพราะเ
 **Frontend Developer** — startup, 1 ปี
 พัฒนาและส่งมอบฟีเจอร์ด้วย Angular, Ionic และ Tailwind CSS บน backend ที่เป็น Firebase
 
-**Event Organizer / Project Coordinator** — ร้านนายกิจสติ๊กเกอร์
+**Event Organizer / Project Coordinator** — ร้านป้ายนายกฤษสติ๊กเกอร์
 จัดทำเอกสารก่อนงาน, รายงานสรุปโปรเจกต์ และดูแลข้อมูลแบบสำรวจ
 
 ---
